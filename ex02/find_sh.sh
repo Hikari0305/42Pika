@@ -1,2 +1,2 @@
 #!/bin/bash
-find -type f -name "*.sh" | sed 's/\.sh$//' | sed 's|^\./||'
+find . -maxdepth 1 -type f -name "*.sh" | sed 's/\.sh$//' | sed 's|^\./||'
