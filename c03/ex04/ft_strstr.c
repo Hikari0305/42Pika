@@ -1,41 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hikari <hikari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/13 12:37:56 by hyoshida          #+#    #+#             */
-/*   Updated: 2025/08/14 06:34:53 by hikari           ###   ########.fr       */
+/*   Created: 2025/08/14 07:52:43 by hikari            #+#    #+#             */
+/*   Updated: 2025/08/14 08:23:46 by hikari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_strcmp(char *s1, char *s2)
+char	*ft_strstr(char *str, char  *to_find)
 {
-	int	i;
+	int i;
+	int j;
+	int k;
 
 	i = 0;
-	while (s1[i] != '\0' || s2[i] != '\0')
+	j = 0;
+	k = 0;
+	while (str[i] != '\0')
 	{
-		if (s1[i] != s2[i])
-		{
-			return (s1[i] - s2[i]);
-		}
 		i++;
 	}
-	return (0);
+	while (to_find[j] != '\0')
+	{
+		j++;
+	}
+	while (str[k] != '\0' && k < i - j + 1)
+	{
+		
+	}
 }
 
-int	main(void)
+int main(void)
 {
-	char	a[] = "Hello";
-	char	b[] = "Hello";
-	char	c[] = "world";
-	int result_1 = ft_strcmp(a, b);
-	int result_2 = ft_strcmp(a, c);
-	printf("%d", result_1);
-	printf("%d", result_2);
-	return (0);
+    char    a[] = "Hello World";
+    char    b[] = "World";
 }

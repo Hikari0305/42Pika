@@ -1,41 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hikari <hikari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/13 12:37:56 by hyoshida          #+#    #+#             */
-/*   Updated: 2025/08/14 06:34:53 by hikari           ###   ########.fr       */
+/*   Created: 2025/08/14 06:50:12 by hikari            #+#    #+#             */
+/*   Updated: 2025/08/14 07:44:18 by hikari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_strcmp(char *s1, char *s2)
+char	*ft_strcat(char *dest, char *src)
 {
-	int	i;
+	int		i;
+	int		j;
 
 	i = 0;
-	while (s1[i] != '\0' || s2[i] != '\0')
+	j = 0;
+	while (dest[i] != '\0')
 	{
-		if (s1[i] != s2[i])
-		{
-			return (s1[i] - s2[i]);
-		}
 		i++;
 	}
-	return (0);
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
 
-int	main(void)
+int main(void)
 {
-	char	a[] = "Hello";
-	char	b[] = "Hello";
-	char	c[] = "world";
-	int result_1 = ft_strcmp(a, b);
-	int result_2 = ft_strcmp(a, c);
-	printf("%d", result_1);
-	printf("%d", result_2);
-	return (0);
+char	a[20] = "hello";
+char	b[10] = "world";
+char	*result = ft_strcat(a, b);
+printf("%s", result);
+return (0);
 }
