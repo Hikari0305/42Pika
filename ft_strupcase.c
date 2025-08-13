@@ -1,26 +1,35 @@
 #include <stdio.h>
 #include <string.h>
-
-char	*ft_strupcase(char *str)
+        
+char    *ft_strupcase(char *str)
 {
-	char	a[];
-	while (*str != '\0')
-	{
-		if (!(*str >= 'A' && *str <= 'Z'))
-		{
-			strcpy(a, str - ('a' - 'A'));
-		}
-		str++;
-	}
-	*str = '\0';
-	return(a);
+        char    *tmp;
+
+        if (*str == '\0')
+        {
+                return (0);
+        }
+        else
+        {
+                tmp = str;
+                while (*str != '\0')
+                {
+                        if (*str >= 'a' && *str <= 'z')
+                        {
+                                *str = *str - ('a' - 'A');
+                        }
+                        str++;
+                }
+                str = tmp;
+                return(str);
+        }
 }
 
 int main(void)
 {
-	char	i[]="Hello";
+        char    i[]="hIroki";
 
-	r = ft_strupcase(i);
-	printf("%s",i);
-	return (0);
+        ft_strupcase(i);
+        printf("%s",i);
+        return (0);
 }
