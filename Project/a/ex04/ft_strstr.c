@@ -1,42 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/14 06:22:58 by hikari            #+#    #+#             */
-/*   Updated: 2025/08/15 10:47:51 by hyoshida         ###   ########.fr       */
+/*   Created: 2025/08/14 07:52:43 by hikari            #+#    #+#             */
+/*   Updated: 2025/08/15 10:48:29 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int c)
+char	*ft_strstr(char *str, char	*to_find)
 {
-	unsigned int	i;
+	int	i;
+	int	j;
 
 	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < c)
+	j = 0;
+	while (str[i] != '\0')
 	{
-		if (s1[i] != s2[i])
+		if (str[i] == to_find[j])
 		{
-			return (s1[i] - s2[i]);
+			while (str[i] == to_find[j])
+			{
+				i++;
+				j++;
+				return (&str[i - j]);
+			}
 		}
 		i++;
 	}
 	return (0);
 }
 
-// int	main(void)
+// int main(void)
 // {
-// 	char	a[] = "Hello";
-// 	char	b[] = "Hello";
-// 	char	c[] = "world";
-// 	int		n = 10;
-// 	int	result_1 = ft_strncmp(a,b,n);
-// 	int	result_2 = ft_strncmp(a,c,n);
-// 	printf("%d\n", result_1);
-// 	printf("%d\n", result_2);
+//     char    a[] = "Hello World";
+//     char    b[] = "World";
+// 	char	*result = ft_strstr(a, b);
+// 	printf("%s", result);
 // 	return (0);
 // }
