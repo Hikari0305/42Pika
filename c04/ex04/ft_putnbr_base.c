@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
 int	base_check(char *base)
 {
@@ -36,26 +36,70 @@ int	base_check(char *base)
 	return (i);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+int	ft_isspace(char c)
 {
-	int		base_len;
-	char	c;
+	if (c == '\t'|| c == '\n' || c == '\v' || c == '\f' || c == '\r' || c == ' ')
+		return (1);
+	return (0);
+}
 
-	base_len = base_check(base);
-	if (nbr < 0)
+int	ft_sign(char *c)
+{
+	int i;
+	int count;
+
+	i = 0;
+	count = 0;
+	while (c[i] == '-' || c[i] == '+')
 	{
-		write(1, "-", 1);
-		nbr = -nbr;
+		if(c[i] == '-')
+			count++;
+		i++;
 	}
-	if (nbr >= base_len)
-		ft_putnbr_base(nbr / base_len, base);
-	c = nbr % base_len + '0';
-	write(1, &c, 1);
+	if (count % 2 == 0)
+		return (1);
+	else
+		return (-1);
+}
+
+int	base_type(char c, char *base)
+{
+	int	i;
+
+	i = 0;
+	while (base[i] != '\0')
+	{
+		if(base[i] == c)
+			return(i);
+		i++;
+	}
+	return (-1);
+}
+
+int    ft_atoi_base(char *str, char *base)
+{
+	int i;
+	int sign;
+	int len_base;
+	int num;
+
+	i = 0;
+	len_base = base_check(base);
+	while (ft_isspace(str[i]))
+		i++;
+	sign = ft_sign(&str[i]);
+	while (num = base_type(str[i], base) != -1)
+	{
+		
+	}
+	return (sign *);
 }
 
 int	main(void)
 {
-	char	c[] = "poneyvif";
-	ft_putnbr_base(-42, c);
-	return(0);
+	char	a[] = "0123456789";
+	char	b[] = "1A";
+	ft_atoi_base(b, a);
+	printf("%d", ft_atoi_base(b, a));
+	return (0);
 }
