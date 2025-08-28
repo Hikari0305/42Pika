@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kyamanak <yamanak@student.42tokyo.jp>      +#+  +:+       +#+         #
+#    By: hikari <hikari@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/08/23 11:39:10 by kyamanak          #+#    #+#              #
-#    Updated: 2025/08/23 14:13:06 by kyamanak         ###   ########.fr        #
+#    Created: 2025/08/27 08:34:31 by hikari            #+#    #+#              #
+#    Updated: 2025/08/27 08:34:33 by hikari           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,11 @@ NAME    = rush-02
 CC      = cc
 CFLAGS  = -Wall -Wextra -Werror
 
-SRCS    = main.c parse_args.c dict_load.c dict_query.c convert.c \
-          str_utils.c io_utils.c
+SRCS    = main.c parse_args.c str_utils.c io_utils.c\
+		dict_parse_utils.c dict_parse.c dict_load.c dict_query.c\
+		dict_read.c convert.c c_convert_block.c c_convert_scale.c\
+		c_say.c c_scales.c c_untils.c str.c Error.c\
+
 OBJS    = $(SRCS:.c=.o)
 
 all: $(NAME)
