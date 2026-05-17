@@ -1,15 +1,27 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/17 15:44:44 by hyoshida          #+#    #+#             */
+/*   Updated: 2026/05/17 15:45:55 by hyoshida         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_strlen(char *a)
+#include "libft.h"
+
+int	ft_strlen(char *a)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (a[i] != '\0')
-    {
-        i++;
-    }
-    return(i);
+	i = 0;
+	while (a[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 
 char	*ft_strrchr(char *s, int c)
@@ -20,7 +32,7 @@ char	*ft_strrchr(char *s, int c)
 	while (i >= 0)
 	{
 		if (s[i] == (char)c)
-			return ((char*)s + i);
+			return ((char *)s + i);
 		i--;
 	}
 	return (NULL);

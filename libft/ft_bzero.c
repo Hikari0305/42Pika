@@ -3,24 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hikari <hikari@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 11:27:20 by hikari            #+#    #+#             */
-/*   Updated: 2025/11/03 13:02:41 by hikari           ###   ########.fr       */
+/*   Updated: 2026/05/17 14:56:46 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h
 
 void ft_bzero(void *s, size_t n)
 {
     unsigned char* p;
-    unsigned int i;
 
-    p = (unsigned char*)s;
-    while(i < n)
-    {
-        p[i] = 0;
-        i++;
-    }
+    p = ft_memset(s, 0, n);
 }
