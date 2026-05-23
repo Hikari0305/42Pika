@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmsap.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/23 16:34:36 by hyoshida          #+#    #+#             */
+/*   Updated: 2026/05/23 16:35:13 by hyoshida         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
@@ -17,7 +29,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			return (NULL);
 		}
 		ft_lstadd_back(&new_element, new_list);
-		lst = lst -> next;
+		lst = lst->next;
 	}
 	return (new_list);
 }

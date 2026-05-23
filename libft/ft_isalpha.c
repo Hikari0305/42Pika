@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 14:19:09 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 15:07:04 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/23 12:17:29 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_isalpha(int c)
 {
-    if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-        return (1);
-    return (0);
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
+	return (0);
 }
 
 // int main(void)

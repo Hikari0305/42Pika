@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 09:52:23 by hikari            #+#    #+#             */
-/*   Updated: 2026/05/17 15:40:56 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/23 16:38:10 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 // int main(void)
 // {
 //     char a[6];
-    
 //     printf("%zu\n",ft_strlcpy(a, "Hello", sizeof(a)));
 //     return(0);
 // }

@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 15:17:06 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 15:17:09 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/23 12:19:33 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		return ;
 	while (*lst != NULL)
 	{
-		next_list = (*lst) -> next;
+		next_list = (*lst)->next;
 		ft_lstdelone(*lst, del);
 		*lst = next_list;
 	}

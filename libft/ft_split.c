@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 15:35:43 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 15:35:53 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/23 16:23:31 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,35 +33,52 @@ static int	word_count(char const *s, char c)
 	return (count);
 }
 
-char    **ft_split(char const *s, char c)
+static int	fill_result(char **result, char const *s, char c)
 {
-    char    **arr;
-    size_t  word_len;
-    size_t  i;
-    size_t  j;
+	size_t	i;
+	size_t	j;
+	size_t	len;
 
-    if (!s)
-        return (NULL);
-    arr = (char **)malloc((word_count(s, c) + 1) * sizeof(char *));
-    if (!arr)
-        return (NULL);
-    i = 0;
-    j = 0;
-    while (s[i] != '\0')
-    {
-        while (s[i] == c)
-            i++;
-        if (s[i] == '\0')
-            break ;
-        word_len = 0;
-        while (s[i + word_len] != '\0' && s[i + word_len] != c) 
-            word_len++;
-        arr[j] = ft_substr(&s[i], 0, word_len);
-        if (!arr[j])
-            return (NULL); 
-        i += word_len;
-        j++;
-    }
-    arr[j] = NULL;
-    return (arr);
+	i = 0;
+	j = 0;
+	while (s[i] != '\0')
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i] == '\0')
+			break ;
+		len = 0;
+		while (s[i + len] != '\0' && s[i + len] != c)
+			len++;
+		result[j] = ft_substr(&s[i], 0, len);
+		if (!result[j])
+			return (0);
+		i += len;
+		j++;
+	}
+	result[j] = NULL;
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**arr;
+	size_t	i;
+
+	if (!s)
+		return (NULL);
+	arr = (char **)malloc((word_count(s, c) + 1) * sizeof(char *));
+	if (!arr)
+		return (NULL);
+	if (!fill_result(arr, s, c))
+	{
+		i = 0;
+		while (arr[i] != NULL)
+		{
+			free(arr[i]);
+			i++;
+		}
+		free(arr);
+	}
+	return (arr);
 }

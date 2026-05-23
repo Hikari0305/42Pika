@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 15:33:22 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 15:33:48 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/23 12:23:29 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!s)

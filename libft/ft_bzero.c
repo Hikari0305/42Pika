@@ -6,13 +6,13 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 11:27:20 by hikari            #+#    #+#             */
-/*   Updated: 2026/05/17 14:56:46 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/23 12:14:43 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    ft_memset(s, 0, n);
+	ft_memset(s, 0, n);
 }
