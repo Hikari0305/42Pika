@@ -1,46 +1,46 @@
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/17 15:46:24 by hyoshida          #+#    #+#             */
+/*   Updated: 2026/05/17 15:46:32 by hyoshida         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char	*start_fail(void)
-{
-	char	*array;
+#include "libft.h"
 
-	array = (char)malloc(1);
-	if (!array)
-		return (NULL);
-	array[0] = '\0';
-	return (array);
-}
-
-char	*ft_subtr(const char *s, unsigned int start, size_t len)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char	*arr;
-	size_t	i;
-	size_t	j;
 	size_t	s_len;
+	size_t	j;
 
 	if (!s)
 		return (NULL);
 	s_len = ft_strlen(s);
 	if (start >= s_len)
-		return (start_fail());
+		len = 0;
+	else if (len > s_len - start)
+		len = s_len - start;
 	arr = (char *)malloc(sizeof(char) * (len + 1));
-	i = start;
 	if (!arr)
 		return (NULL);
 	j = 0;
 	while (j < len)
 	{
-		arr[j] = s[i];
-		i++;
+		arr[j] = s[start + j];
 		j++;
 	}
 	arr[j] = '\0';
 	return (arr);
 }
 
-int	main(void)
-{
-	char	*a = ft_subtr("Hello World", 3, 5);
-	free(a);
-	return(0);
-}
+// int	main(void)
+// {
+// 	char	*a = ft_subtr("Hello World", 3, 5);
+// 	free(a);
+// 	return(0);
+// }

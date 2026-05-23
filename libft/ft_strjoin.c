@@ -1,6 +1,18 @@
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/17 15:38:03 by hyoshida          #+#    #+#             */
+/*   Updated: 2026/05/17 15:38:13 by hyoshida         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char	*copy_s(char const	*c1, char const	*c2, char	*array)
+#include "libft.h"
+
+static char	*copy_s(char const	*c1, char const	*c2, char	*array)
 {
 	int	i;
 	int	j;
@@ -32,21 +44,21 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2);
-	arr = (char)malloc(len + 1);
+	arr = (char *)malloc(len + 1);
 	if (!arr)
 		return (NULL);
 	return (copy_s(s1, s2, arr));
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(void)
-{
-    char *x = ft_strjoin("Hello", " World");
-    printf("%s\n", x); // Hello World
-    free(x);
+// int main(void)
+// {
+//     char *x = ft_strjoin("Hello", " World");
+//     printf("%s\n", x); // Hello World
+//     free(x);
 
-    char *y = ft_strjoin("", "abc");
-    printf("%s\n", y); // abc
-    free(y);
-}
+//     char *y = ft_strjoin("", "abc");
+//     printf("%s\n", y); // abc
+//     free(y);
+// }

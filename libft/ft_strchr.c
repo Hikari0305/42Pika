@@ -1,46 +1,37 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/17 15:36:02 by hyoshida          #+#    #+#             */
+/*   Updated: 2026/05/17 15:36:35 by hyoshida         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_strlen(char *a)
+#include "libft.h"
+
+char    *ft_strchr(const char *s, int c)
 {
-    int i;
+    char    ch;
 
-    i = 0;
-    while (a[i] != '\0')
+    ch = (char)c;
+    while (*s != '\0')
     {
-        i++;
+        if (*s == ch)
+            return ((char *)s);
+        s++;
     }
-    return(i);
+    if (ch == '\0')
+        return ((char *)s);
+    return (NULL);
 }
 
-char	*ft_strchr(char *haystack, char *needle)
-{
-	int	i;
-	int	j;
-	int	length;
-
-	i = 0;
-	j = 0;
-	length = ft_strlen(needle);
-	if (length == 0)
-		return (haystack);
-	while (haystack[i] != '\0')
-	{
-		while (needle[j] == haystack[i + j])
-		{
-			if (j == length - 1)
-				return ((char*)haystack + i);
-			j++;
-		}
-		j = 0;
-		i++;
-	}
-	return (NULL);
-}
-
-int main(void)
-{
-	char str[] = "banana";
-	char *p = ft_strrchr(str, "na");
-	printf("%s\n", p);
-	return (0);
-}
+// int main(void)
+// {
+// 	char str[] = "banana";
+// 	char *p = ft_strrchr(str, "na");
+// 	printf("%s\n", p);
+// 	return (0);
+// }

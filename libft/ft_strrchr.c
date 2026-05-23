@@ -1,35 +1,35 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/17 15:44:44 by hyoshida          #+#    #+#             */
+/*   Updated: 2026/05/17 15:45:55 by hyoshida         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_strlen(char *a)
+#include "libft.h"
+
+char    *ft_strrchr(const char *s, int c)
 {
     int i;
 
-    i = 0;
-    while (a[i] != '\0')
+    i = ft_strlen(s);
+    while (i >= 0)
     {
-        i++;
+        if (s[i] == (char)c)
+            return ((char *)s + i);
+        i--;
     }
-    return(i);
+    return (NULL);
 }
 
-char	*ft_strrchr(char *s, int c)
-{
-	int	i;
-
-	i = ft_strlen;
-	while (i >= 0)
-	{
-		if (s[i] == (char)c)
-			return ((char*)s + i);
-		i--;
-	}
-	return (NULL);
-}
-
-int main(void)
-{
-	char str[] = "banana";
-	char *p = ft_strrchr(str, 'a');
-	printf("%s\n", p);
-	return (0);
-}
+// int main(void)
+// {
+// 	char str[] = "banana";
+// 	char *p = ft_strrchr(str, 'a');
+// 	printf("%s\n", p);
+// 	return (0);
+// }
