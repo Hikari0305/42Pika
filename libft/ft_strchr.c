@@ -1,27 +1,15 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/17 15:36:02 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 15:36:35 by hyoshida         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include <stdio.h>
 
-#include "libft.h"
-
-int	ft_strlen(char *a)
+int ft_strlen(char *a)
 {
-	int	i;
+    int i;
 
-	i = 0;
-	while (a[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+    i = 0;
+    while (a[i] != '\0')
+    {
+        i++;
+    }
+    return(i);
 }
 
 char	*ft_strchr(char *haystack, char *needle)

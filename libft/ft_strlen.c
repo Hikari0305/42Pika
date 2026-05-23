@@ -3,25 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
+/*   By: hikari <hikari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 21:04:15 by hikari            #+#    #+#             */
-/*   Updated: 2026/05/17 15:41:54 by hyoshida         ###   ########.fr       */
+/*   Updated: 2025/10/30 21:19:17 by hikari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
+#include <stdio.h>
 
-int	ft_strlen(char *a)
+int ft_strlen(char *a)
 {
-	int	i;
+    int i;
 
-	i = 0;
-	while (a[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+    i = 0;
+    while (a[i] != '\0')
+    {
+        i++;
+    }
+    return(i);
 }
 
 int main(void)

@@ -1,27 +1,15 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/17 15:34:09 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 15:35:07 by hyoshida         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include <unistd.h>
 
-#include "libft.h"
-
-void	ft_pustr_fd(char *s, int fd)
+void    ft_pustr_fd(char *s, int fd)
 {
-	int	i;
+    int i;
 
-	i = 0;
-	if (!s)
-		return ;
-	while (s[i] != '\0')
-	{
-		write(fd, s[i], 1);
-		i++;
-	}
+    i = 0;
+    if (!s)
+        return;
+    while (s[i] != '\0')
+    {
+        write(fd, s[i], 1);
+        i++;
+    }
 }

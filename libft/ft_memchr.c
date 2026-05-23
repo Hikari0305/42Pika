@@ -1,33 +1,21 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/17 15:21:58 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 15:23:14 by hyoshida         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include <stdio.h>
 
-#include "libft.h"
-
-void	ft_memchr(const void *arr, int c, size_t n)
+void    ft_memchr(const void *arr, int c, size_t n)
 {
-	size_t			i;
-	unsigned char	*p;
-	unsigned char	ch;
+    size_t i;
+    unsigned char *p;
+    unsigned char ch;
 
-	i = 0;
-	p = (unsigned char *) arr;
-	ch = (unsigned char) c;
-	while (i < n)
-	{
-		if (p[i] == c)
-			return (p[i]);
-		i++;
-	}
-	return (NULL);
+    i = 0;
+    p = (unsigned char*) arr;
+    ch = (unsigned char) c;
+    while (i < n)
+    {
+        if (p[i] == c)
+            return (p[i]);
+        i++;
+    }
+    return (NULL);
 }
 
 int main(void)

@@ -1,23 +1,8 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/17 14:45:23 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 14:46:22 by hyoshida         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef LIBFT_H
 # define LIBFT_H
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stddef.h>
-# include <stdint.h>
-
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
