@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 21:04:15 by hikari            #+#    #+#             */
-/*   Updated: 2026/05/17 15:41:54 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 12:35:05 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ size_t	ft_strlen(const char *a)
 // int main(void)
 // {
 //     char    a[] = "Hello";
-//     printf("%d",ft_strlen(a));
+//     printf("%zu", ft_strlen(a));
 //     return(0);
 // }

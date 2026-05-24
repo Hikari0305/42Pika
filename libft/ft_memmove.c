@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 13:55:48 by hikari            #+#    #+#             */
-/*   Updated: 2026/05/17 15:32:42 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 13:50:29 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,12 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 		}
 	}
 	return (dst);
+}
+
+int	main(void)
+{
+	char    str1[10] = "XXXXXX";
+    char    str2[10] = "ABCDE";
+    printf("%s\n", (char *)ft_memmove(str1, str2, 3));
+	return (0);
 }

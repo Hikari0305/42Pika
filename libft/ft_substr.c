@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 15:46:24 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 15:46:32 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 15:22:59 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	return (arr);
 }
 
-// int	main(void)
-// {
-// 	char	*a = ft_subtr("Hello World", 3, 5);
-// 	free(a);
-// 	return(0);
-// }
+int	main(void)
+{
+	char	*a = ft_subtr("Hello World", 3, 5);
+	free(a);
+	return(0);
+}

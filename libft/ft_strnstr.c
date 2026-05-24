@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 15:43:11 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/23 16:40:29 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 15:22:59 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
-// int main(void)
-// {
-//     char *b = ft_strnstr("Hello World", "Hello", 5);
-//     printf("%s\n", b);
-//     return (0);
-// }
+int main(void)
+{
+    char *b = ft_strnstr("Hello World", "Hello", 5);
+    printf("%s\n", b);
+    return (0);
+}

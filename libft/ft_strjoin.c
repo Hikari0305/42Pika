@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 15:38:03 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 15:38:13 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 15:14:23 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (copy_s(s1, s2, arr));
 }
 
-// #include <stdio.h>
+#include <stdio.h>
 
-// int main(void)
-// {
-//     char *x = ft_strjoin("Hello", " World");
-//     printf("%s\n", x); // Hello World
-//     free(x);
+int main(void)
+{
+    char *x = ft_strjoin("Hello", " World");
+    printf("%s\n", x); // Hello World
+    free(x);
 
-//     char *y = ft_strjoin("", "abc");
-//     printf("%s\n", y); // abc
-//     free(y);
-// }
+    char *y = ft_strjoin("", "abc");
+    printf("%s\n", y); // abc
+    free(y);
+}

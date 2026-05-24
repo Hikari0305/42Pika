@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 15:42:19 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/23 16:39:12 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 15:22:59 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
-// int main(void)
-// {
-// 	int a = ft_strncmp("apple", "banana", 5);
-// 	printf("%d\n", a);
-// 	return (0);
-// }
+int main(void)
+{
+	int a = ft_strncmp("apple", "banana", 5);
+	printf("%d\n", a);
+	return (0);
+}

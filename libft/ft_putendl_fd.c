@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 15:33:22 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/23 12:23:29 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 14:01:33 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,13 @@ void	ft_putendl_fd(char *s, int fd)
 		i++;
 	}
 	write(fd, "\n", 1);
+}
+
+int	main(void)
+{
+	char *c;
+	
+	c = "Hello";
+	ft_putendl_fd(c, 1);
+	return (0);
 }

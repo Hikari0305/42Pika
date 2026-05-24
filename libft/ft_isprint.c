@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 14:19:42 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 15:14:37 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 10:05:52 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int	ft_isprint(int c)
 	return (0);
 }
 
-// int main(void)
-// {
-//     char c = '8';
+int main(void)
+{
+    char c = '8';
 
-//     printf("%d\n", ft_isprint(c));
-//     return 0;
-// }
+    printf("%d\n", ft_isprint(c));
+    return 0;
+}

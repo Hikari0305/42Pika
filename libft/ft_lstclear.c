@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 15:17:06 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/23 12:19:33 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 12:34:26 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,25 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = next_list;
 	}
 }
+
+
+// int	main(void)
+// {
+// 	t_list	*head = NULL;
+// 	t_list	*lst;
+
+// 	ft_lstadd_back(&head, ft_lstnew(ft_strdup("Hikari")));
+// 	ft_lstadd_back(&head, ft_lstnew(ft_strdup("Yoshida")));
+// 	ft_lstadd_back(&head, ft_lstnew(ft_strdup("42Tokyo")));
+// 	lst = head;
+// 	ft_lstclear(&head, free);
+// 	if (head == NULL)
+// 	{
+// 		printf("head は NULL になりました\n");
+// 	}
+// 	else
+// 	{
+// 		printf("head が NULL になっていません\n");
+// 	}
+// 	return (0);
+// }

@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 15:33:53 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 15:34:02 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 14:19:43 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,10 @@ void	ft_putnbr_fd(int n, int fd)
 	if (nb > 9)
 		ft_putnbr_fd(nb / 10, fd);
 	ft_putchar_fd(nb % 10 + '0', fd);
+}
+
+int	main(void)
+{
+	ft_putnbr_fd(42, 1);
+	return (0);
 }

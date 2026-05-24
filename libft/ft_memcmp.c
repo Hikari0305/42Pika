@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 15:23:20 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 15:24:32 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 13:50:29 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 
-// int main(void)
-// {
-//     char a[] = {'A', '\0', 'B'};
-//     char b[] = {'A', '\0', 'C'};
-//     ft_memcmp(a, b, 3);
-//     return (0);
-// }
+int main(void)
+{
+    char a[] = {'A', '\0', 'B'};
+    char b[] = {'A', '\0', 'C'};
+    printf("%d\n", ft_memcmp(a, b, 3));
+    return (0);
+}

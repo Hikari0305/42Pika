@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 15:42:03 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 15:42:13 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 15:22:58 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,30 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	str[i] = '\0';
 	return (str);
+}
+
+char	modify_index(unsigned int i, char c)
+{
+	if (i % 2 == 1)
+	{
+		if (c >= 'a' && c <= 'z')
+			return (c - 32);
+	}
+	else
+	{
+		if (c >= 'A' && c <= 'Z')
+			return (c + 32);
+	}
+	return (c);		
+}
+
+int	main(void)
+{
+	char const *str = "hello my name is hikari";
+	char	*result;
+	result = ft_strmapi(str, modify_index);
+	if (result == NULL)
+		return (1);
+	printf("%s\n", result);
+	return (0);
 }

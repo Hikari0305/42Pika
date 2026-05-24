@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 15:34:09 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 15:35:07 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 14:19:43 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,13 @@ void	ft_putstr_fd(char *s, int fd)
 		write(fd, &s[i], 1);
 		i++;
 	}
+}
+
+int	main(void)
+{
+	char	*c;
+
+	c = "Hello";
+	ft_putstr_fd(c, 1);
+	return (0);
 }

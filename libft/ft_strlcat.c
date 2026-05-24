@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 21:54:54 by hikari            #+#    #+#             */
-/*   Updated: 2026/05/23 17:35:15 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 15:22:58 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (dst_len + src_len);
 }
 
-// int main(void)
-// {
-// 	size_t a;
-// 	char b[4] = "";
-// 	a = ft_strlcat(b, "World", sizeof(b));
-// 	printf("%zu\n", a);
-// 	return(0);
-// }
+int main(void)
+{
+	size_t a;
+	char b[4] = "";
+	a = ft_strlcat(b, "World", sizeof(b));
+	printf("%zu\n", a);
+	return(0);
+}

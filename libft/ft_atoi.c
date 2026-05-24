@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 14:18:11 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 14:41:51 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 09:49:58 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,10 @@ int	ft_atoi(const char *str)
 	return ((int)result * sign);
 }
 
-// int	main(void)
-// {
-//     printf("%d\n", ft_atoi('-10'));
-//     return (0);
-// }
+int	main(void)
+{
+    printf("%d\n", ft_atoi("42"));
+	printf("%d\n", ft_atoi("--42"));
+	printf("%d\n", ft_atoi("\t\n\v\f\r 42"));
+    return (0);
+}

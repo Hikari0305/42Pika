@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 14:19:50 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 15:16:05 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 10:04:15 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,8 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-// int	main(void)
-// {
-// 	ft_itoa(42);
-// }
+int	main(void)
+{
+	printf("%s\n", ft_itoa(42));
+	return (0);
+}

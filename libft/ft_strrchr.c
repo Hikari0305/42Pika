@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 15:44:44 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/23 16:41:08 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 15:22:59 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
-// int main(void)
-// {
-// 	char str[] = "banana";
-// 	char *p = ft_strrchr(str, 'a');
-// 	printf("%s\n", p);
-// 	return (0);
-// }
+int main(void)
+{
+	char str[] = "banana";
+	char *p = ft_strrchr(str, 'a');
+	printf("%s\n", p);
+	return (0);
+}

@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 14:19:09 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/23 12:17:29 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 10:04:43 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int	ft_isalpha(int c)
 	return (0);
 }
 
-// int main(void)
-// {
-//     char c = 'A';
+int main(void)
+{
+    char c = 'A';
 
-//     printf("%d\n", ft_isalpha(c));
-//     return 0;
-// }
+    printf("%d\n", ft_isalpha(c));
+    return 0;
+}

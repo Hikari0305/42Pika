@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 15:35:43 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/23 16:23:31 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 14:19:43 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,27 @@ char	**ft_split(char const *s, char c)
 		free(arr);
 	}
 	return (arr);
+}
+
+int	main(void)
+{
+	char	**result;
+	result = ft_split("Hello My Name Is Hikari", ' ');
+	int	i = 0;
+
+	if (result == NULL)
+		return(1);
+	if (result[0] == NULL)
+	{
+		free(result);
+		return (1);
+	}
+	while (result[i] != NULL)
+	{
+		printf("[%d]: %s\n", i, result[i]);
+		free(result[i]);
+		i++;
+	}
+	free(result);
+	return (0);
 }

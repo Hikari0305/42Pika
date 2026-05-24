@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 13:03:17 by hikari            #+#    #+#             */
-/*   Updated: 2026/05/23 12:22:51 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 14:01:32 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
-// int main(void)
-// {
-// 	void *a;
-// 	char b[9] = "";
-// 	a = ft_memcpy(b, "Hello", sizeof(b));
-// 	printf("%s\n", (char*)a);
-// 	return(0);
-// }
+int main(void)
+{
+	void *a;
+	char b[9] = "";
+	a = ft_memcpy(b, "Hello", sizeof(b));
+	printf("%s\n", (char*)a);
+	return(0);
+}

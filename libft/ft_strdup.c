@@ -6,7 +6,7 @@
 /*   By: hyoshida <hikari.y.0305@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 15:36:43 by hyoshida          #+#    #+#             */
-/*   Updated: 2026/05/17 15:37:57 by hyoshida         ###   ########.fr       */
+/*   Updated: 2026/05/24 14:21:34 by hyoshida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ char	*ft_strdup(const char *s1)
 	return (arr);
 }
 
-// int main(void)
-// {
-//     char    *a = ft_strdup("Hello");
-//     printf("%s\n", a);
-//     free(a);
-//     return (0);
-// }
+int main(void)
+{
+    char    *a = ft_strdup("Hello");
+    printf("%s\n", a);
+    free(a);
+    return (0);
+}
