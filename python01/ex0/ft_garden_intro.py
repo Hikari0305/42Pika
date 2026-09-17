@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
-def main():
-    name = "Rose"
+def main() -> None:
+    plant = "Rose"
     height = 25
     age = 30
 
     print("=== Welcome to My Garden ===")
-    print(f"Name: {name}")
+    print(f"Plant: {plant}")
     print(f"Height: {height}cm")
     print(f"Age: {age} days")
     print("=== End of Program ===")
